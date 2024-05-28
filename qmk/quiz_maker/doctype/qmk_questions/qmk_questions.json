@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:question",
+ "creation": "2024-05-28 12:32:09.432169",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "question",
+  "answer"
+ ],
+ "fields": [
+  {
+   "fieldname": "question",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Question",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "answer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Answer",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-28 12:33:17.869459",
+ "modified_by": "Administrator",
+ "module": "Quiz Maker",
+ "name": "QMK Questions",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

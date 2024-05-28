@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-28 13:33:00.302514",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "questions_per_page"
+ ],
+ "fields": [
+  {
+   "default": "5",
+   "fieldname": "questions_per_page",
+   "fieldtype": "Int",
+   "label": "Questions per page"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-05-28 13:39:35.983538",
+ "modified_by": "Administrator",
+ "module": "Quiz Maker",
+ "name": "QMK Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
