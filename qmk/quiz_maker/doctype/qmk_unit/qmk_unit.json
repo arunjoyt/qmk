@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_guest_to_view": 1,
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:UNIT-{unit_number}",
  "creation": "2024-05-28 12:33:47.961785",
@@ -39,7 +40,7 @@
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-28 12:37:42.634976",
+ "modified": "2024-05-28 16:31:54.116713",
  "modified_by": "Administrator",
  "module": "Quiz Maker",
  "name": "QMK Unit",
