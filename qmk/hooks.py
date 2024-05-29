@@ -6,6 +6,19 @@ app_email = "arun@frappify.com"
 app_license = "mit"
 # required_apps = []
 
+fixtures = [
+    {
+        "doctype": "Role",
+        "filters": [["name", "=", "QMK Web User"]]
+    },
+    {
+        "doctype": "Custom DocPerm",
+        "filters": {
+            "role": ["in","QMK Web User"]
+        }
+    },
+]
+
 # Includes in <head>
 # ------------------
 
