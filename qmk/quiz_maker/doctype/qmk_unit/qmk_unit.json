@@ -17,18 +17,23 @@
   {
    "fieldname": "unit_number",
    "fieldtype": "Int",
-   "label": "Unit Number"
+   "in_list_view": 1,
+   "label": "Unit Number",
+   "reqd": 1
   },
   {
    "fieldname": "unit_name",
    "fieldtype": "Data",
-   "label": "Unit Name"
+   "in_list_view": 1,
+   "label": "Unit Name",
+   "reqd": 1
   },
   {
    "fieldname": "questions",
    "fieldtype": "Table",
    "label": "Questions",
-   "options": "QMK Questions"
+   "options": "QMK Questions",
+   "reqd": 1
   },
   {
    "fieldname": "route",
@@ -40,7 +45,7 @@
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-28 16:31:54.116713",
+ "modified": "2024-05-29 16:15:11.271857",
  "modified_by": "Administrator",
  "module": "Quiz Maker",
  "name": "QMK Unit",
