@@ -43,10 +43,10 @@
 		  </tr>
 		</thead>
 		<tbody id="scores-table-body">
-			{% for question in scores %}
+			{% for score in scores %}
 		  <tr>
-			<td>{{ question.submit_date.strftime("%Y-%m-%d %H:%M") }}</td>
-			<td>{{ question.correct_count }} / {{question.total_count}}</td>
+			<td>{{ score.submit_date.strftime("%Y-%m-%d %H:%M") }}</td>
+			<td>{{ score.correct_count }} / {{score.total_count}}</td>
 		  </tr>
 		  {% endfor %}
 		</tbody>
