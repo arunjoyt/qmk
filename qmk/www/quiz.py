@@ -32,7 +32,7 @@ def get_context(context):
 @frappe.whitelist()
 def save_score(user, correct_answer_count, total_question_count):
     doc = frappe.new_doc("QMK Score")
-    doc.user_name  = user
+    doc.user_name  = frappe.get_doc("User",user)
     doc.correct_count = correct_answer_count
     doc.total_count = total_question_count
     doc.submit_date = datetime.now()

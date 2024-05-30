@@ -14,8 +14,9 @@
  "fields": [
   {
    "fieldname": "user_name",
-   "fieldtype": "Data",
-   "label": "User Name"
+   "fieldtype": "Link",
+   "label": "User Name",
+   "options": "User"
   },
   {
    "fieldname": "correct_count",
@@ -41,7 +42,7 @@
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-28 13:37:18.712675",
+ "modified": "2024-05-30 16:29:29.773967",
  "modified_by": "Administrator",
  "module": "Quiz Maker",
  "name": "QMK Score",
