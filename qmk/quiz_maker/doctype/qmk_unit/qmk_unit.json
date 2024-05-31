@@ -3,11 +3,16 @@
  "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:UNIT-{unit_number}",
+ "autoname": "format:S{section_number}-U{unit_number}-{unit_name}",
  "creation": "2024-05-28 12:33:47.961785",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_section",
+  "section",
+  "column_break_qiqh",
+  "section_number",
+  "unit_section",
   "unit_number",
   "unit_name",
   "questions",
@@ -32,20 +37,48 @@
    "fieldname": "questions",
    "fieldtype": "Table",
    "label": "Questions",
-   "options": "QMK Questions",
-   "reqd": 1
+   "options": "QMK Questions"
   },
   {
    "fieldname": "route",
    "fieldtype": "Data",
    "hidden": 1,
    "label": "Route"
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "QMK Section",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_section",
+   "fieldtype": "Section Break",
+   "label": "Section"
+  },
+  {
+   "fieldname": "unit_section",
+   "fieldtype": "Section Break",
+   "label": "Unit"
+  },
+  {
+   "fieldname": "column_break_qiqh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "section.section_number",
+   "fieldname": "section_number",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Section Number",
+   "read_only": 1
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-29 16:15:11.271857",
+ "modified": "2024-05-31 10:20:59.503249",
  "modified_by": "Administrator",
  "module": "Quiz Maker",
  "name": "QMK Unit",
