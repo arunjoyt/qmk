@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:S{section_number}-{section_name}",
  "creation": "2024-05-31 09:02:35.696621",
@@ -24,7 +25,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-31 09:47:37.950515",
+ "modified": "2024-06-03 11:43:02.672583",
  "modified_by": "Administrator",
  "module": "Quiz Maker",
  "name": "QMK Section",
