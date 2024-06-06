@@ -100,30 +100,31 @@
 		var scoreElement = document.getElementById('score');
 		scoreElement.textContent = correctCount+"/"+total_question_count;
 		if (user !== "Guest") {
-			saveScore(user, correctCount, total_question_count)
-			updateScoreOnUI(correctCount, total_question_count)
-
+			const submitDate = new Date();
+			const formattedDate = formatDate(submitDate);
+			saveScore(user, correctCount, total_question_count, formattedDate)
+			updateScoreOnUI(correctCount, total_question_count, formattedDate)
 		}
 	}
-	function updateScoreOnUI(correct_answer_count, total_question_count){
+	function updateScoreOnUI(correct_answer_count, total_question_count, submit_date){
 		// Get table body
         const tbody = document.getElementById('scores-table-body');
         const row = tbody.insertRow(0);
         const cell1 = row.insertCell(0);
         const cell2 = row.insertCell(1);
-		const date = new Date()
-		const formattedDate = formatDate(date);
-        cell1.innerHTML = formattedDate;
+        cell1.innerHTML = submit_date.slice(0,-3);
         cell2.innerHTML = `${correct_answer_count} / ${total_question_count}`;
 
 	}
-	function saveScore(user, correct_answer_count, total_question_count) {
+	function saveScore(user, correct_answer_count, total_question_count, submit_date) {
 		frappe.call({
             method: 'qmk.www.quiz.save_score',
 			args: {
 				user: user,
 				correct_answer_count: correct_answer_count,
-				total_question_count: total_question_count
+				total_question_count: total_question_count,
+				submit_date: submit_date
+
 			}
         });
 	}
@@ -149,8 +150,9 @@
 		const day = String(date.getDate()).padStart(2, '0');
 		const hours = String(date.getHours()).padStart(2, '0');
 		const minutes = String(date.getMinutes()).padStart(2, '0');
+		const seconds = String(date.getSeconds()).padStart(2, '0');
 
-		return `${year}-${month}-${day} ${hours}:${minutes}`;
+		return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 	}
 
 	</script>
