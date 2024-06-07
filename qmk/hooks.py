@@ -14,7 +14,7 @@ fixtures = [
     {
         "doctype": "Custom DocPerm",
         "filters": {
-            "role": ["in",["QMK Web User","System Manager"]]
+            "parent": ["in",["QMK Score",]]
         }
     },
 ]
