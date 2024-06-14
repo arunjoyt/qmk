@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:question",
  "creation": "2024-06-14 13:34:16.303961",
@@ -30,7 +31,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-14 13:34:16.303961",
+ "modified": "2024-06-14 13:45:07.755544",
  "modified_by": "Administrator",
  "module": "Quiz Maker",
  "name": "QMK Question",
