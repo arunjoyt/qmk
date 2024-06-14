@@ -4,7 +4,7 @@
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:S{section_number}-U{unit_number}-{unit_name}",
- "creation": "2024-05-28 12:33:47.961785",
+ "creation": "2024-06-14 13:32:01.626947",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -19,6 +19,35 @@
   "route"
  ],
  "fields": [
+  {
+   "fieldname": "section_section",
+   "fieldtype": "Section Break",
+   "label": "Section"
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "QMK Section",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qiqh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "section.section_number",
+   "fieldname": "section_number",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Section Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unit_section",
+   "fieldtype": "Section Break",
+   "label": "Unit"
+  },
   {
    "fieldname": "unit_number",
    "fieldtype": "Int",
@@ -35,50 +64,21 @@
   },
   {
    "fieldname": "questions",
-   "fieldtype": "Table",
+   "fieldtype": "Table MultiSelect",
    "label": "Questions",
-   "options": "QMK Questions"
+   "options": "QMK Question List"
   },
   {
    "fieldname": "route",
    "fieldtype": "Data",
    "hidden": 1,
    "label": "Route"
-  },
-  {
-   "fieldname": "section",
-   "fieldtype": "Link",
-   "label": "Section",
-   "options": "QMK Section",
-   "reqd": 1
-  },
-  {
-   "fieldname": "section_section",
-   "fieldtype": "Section Break",
-   "label": "Section"
-  },
-  {
-   "fieldname": "unit_section",
-   "fieldtype": "Section Break",
-   "label": "Unit"
-  },
-  {
-   "fieldname": "column_break_qiqh",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fetch_from": "section.section_number",
-   "fieldname": "section_number",
-   "fieldtype": "Int",
-   "hidden": 1,
-   "label": "Section Number",
-   "read_only": 1
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-31 10:20:59.503249",
+ "modified": "2024-06-14 13:32:01.626947",
  "modified_by": "Administrator",
  "module": "Quiz Maker",
  "name": "QMK Unit",
