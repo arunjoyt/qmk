@@ -5,20 +5,39 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "questions_per_page"
+  "questions_per_page",
+  "quiz2_section",
+  "quiz2_name",
+  "quiz2_section_mapping"
  ],
  "fields": [
   {
    "default": "5",
    "fieldname": "questions_per_page",
    "fieldtype": "Int",
-   "label": "Questions per page"
+   "label": "Questions Per Page"
+  },
+  {
+   "fieldname": "quiz2_section",
+   "fieldtype": "Section Break",
+   "label": "Quiz2"
+  },
+  {
+   "fieldname": "quiz2_name",
+   "fieldtype": "Data",
+   "label": "Quiz2 Name"
+  },
+  {
+   "fieldname": "quiz2_section_mapping",
+   "fieldtype": "Link",
+   "label": "Quiz2 Section Mapping",
+   "options": "QMK Section"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-05-28 13:39:35.983538",
+ "modified": "2024-10-03 15:01:20.195335",
  "modified_by": "Administrator",
  "module": "Quiz Maker",
  "name": "QMK Settings",
