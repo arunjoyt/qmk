@@ -26,6 +26,9 @@
 		<button onclick="checkScore('{{ questions|length }}','{{ user }}')" class="btn btn-primary">Submit All / Check Score</button>
 		<button onclick="showAll('{{ questions|length }}')" class="btn btn-primary">Show All</button>
 		<button onclick="hideAll('{{ questions|length }}')" class="btn btn-primary">Hide All</button>
+		<br>
+		<br>
+		<button onclick="window.location.reload();" class="btn btn-info">Next Set</button>
 		<span>&nbsp;&nbsp;</span>
 		<span id="score"></span>
 		{% if user == 'Guest'  %}
