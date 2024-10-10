@@ -4,8 +4,22 @@ from datetime import datetime
 
 def get_context(context):
     context.user = frappe.session.user
+
+    # Get the unit selected by the user (if any)
+    selected_unit = frappe.form_dict.get('unit')
+    context.selected_unit = selected_unit
+
+    # Fetch all Unit Names
+    all_units = frappe.get_all('QMK Unit', fields=['unit_name'])
+    context.all_unit_names = [unit['unit_name'] for unit in all_units]
+
     questions_per_page = frappe.get_doc("QMK Settings").questions_per_page
-    units = frappe.get_all("QMK Unit")
+    # Fetch all units if no unit is selected, otherwise filter by the selected unit
+    if selected_unit:
+        filters = {'unit_name': selected_unit}
+    else:
+        filters = {}
+    units = frappe.get_all("QMK Unit",filters=filters)
     questions = []
     for unit in units:
         unit_doc = frappe.get_doc("QMK Unit", unit.name)
