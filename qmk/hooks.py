@@ -9,12 +9,12 @@ app_license = "mit"
 fixtures = [
     {
         "doctype": "Role",
-        "filters": [["name", "=", "QMK Web User"]]
+        "filters": [["name", "=", "Quiz Web User"]]
     },
     {
         "doctype": "Custom DocPerm",
         "filters": {
-            "parent": ["in",["QMK Score",]]
+            "parent": ["in",["Quiz Score",]]
         }
     },
 ]
