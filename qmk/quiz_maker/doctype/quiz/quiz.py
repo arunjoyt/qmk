@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class QMKQuestions(Document):
+class Quiz(Document):
 	pass

@@ -1,18 +1,18 @@
 {% extends "templates/web.html" %}
 {% block page_content %}
 <h1>Quiz</h1>
-   <!-- Unit selection dropdown -->
+   <!-- Quiz selection dropdown -->
    <form method="GET" action="">
-	<select name="unit"  class="form-control-sm" onchange="this.form.submit()">
+	<select name="quiz"  class="form-control-sm" onchange="this.form.submit()">
 		<option value="">All</option>
-		{% for unit_name in all_unit_names %}
-		<option value="{{ unit_name }}" {% if selected_unit == unit_name %}selected{% endif %}>{{ unit_name }}</option>
+		{% for quiz in all_quizzes %}
+		<option value="{{ quiz }}" {% if selected_quiz == quiz %}selected{% endif %}>{{ quiz }}</option>
 		{% endfor %}
 	</select>
 </form>
 
 <div>
-		{% for question in questions %}	
+		{% for qanda in qandas %}	
 			{% set resultId = "result" + loop.index|string %}	
 			{% set questionId = "question" + loop.index|string %}
 			{% set inputId = "input" + loop.index|string %}	
@@ -20,22 +20,22 @@
 				<div id="{{ questionId }}">
 					<br>
 				<ul class="list-unstyled">
-					<li> {{ loop.index }}. {{ question.question }} </li>
+					<li> {{ loop.index }}. {{ qanda.question }} </li>
 				 </ul>
 				  <input type="text" class="form-control-sm" id="{{ inputId }}">
 				  <br>
-				  <button onclick="checkAnswer('{{ inputId }}', '{{ question.answer }}', '{{ resultId }}', '{{ correctAnswerId }}' )" class="btn btn-primary">Submit</button>
-				  <button onclick="showAnswer('{{ question.answer }}', '{{ correctAnswerId }}' )" class="btn btn-primary">Show</button>
+				  <button onclick="checkAnswer('{{ inputId }}', '{{ qanda.answer }}', '{{ resultId }}', '{{ correctAnswerId }}' )" class="btn btn-primary">Submit</button>
+				  <button onclick="showAnswer('{{ qanda.answer }}', '{{ correctAnswerId }}' )" class="btn btn-primary">Show</button>
 				  <button onclick="hideAnswer('{{ correctAnswerId }}' )" class="btn btn-primary">Hide</button>
 				  <br>
 				  <span id="{{ resultId }}"></span>
-				  <span id="{{ correctAnswerId }}" style="visibility: hidden;">{{ question.answer }}</span>
+				  <span id="{{ correctAnswerId }}" style="visibility: hidden;">{{ qanda.answer }}</span>
 				</div>
 		{% endfor %}
 		<br>
-		<button onclick="checkScore('{{ questions|length }}','{{ user }}')" class="btn btn-primary">Submit All / Check Score</button>
-		<button onclick="showAll('{{ questions|length }}')" class="btn btn-primary">Show All</button>
-		<button onclick="hideAll('{{ questions|length }}')" class="btn btn-primary">Hide All</button>
+		<button onclick="checkScore('{{ qandas|length }}','{{ user }}')" class="btn btn-primary">Submit All / Check Score</button>
+		<button onclick="showAll('{{ qandas|length }}')" class="btn btn-primary">Show All</button>
+		<button onclick="hideAll('{{ qandas|length }}')" class="btn btn-primary">Hide All</button>
 		<br>
 		<br>
 		<button onclick="window.location.reload();" class="btn btn-info">Next Set</button>

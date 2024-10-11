@@ -5,5 +5,5 @@
 from frappe.website.website_generator import WebsiteGenerator
 
 
-class QMKUnit(WebsiteGenerator):
+class QuizScore(WebsiteGenerator):
 	pass

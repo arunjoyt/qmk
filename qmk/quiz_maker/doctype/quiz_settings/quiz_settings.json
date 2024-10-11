@@ -1,51 +1,41 @@
 {
  "actions": [],
- "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:S{section_number}-{section_name}",
- "creation": "2024-05-31 09:02:35.696621",
+ "creation": "2024-10-11 14:04:17.424818",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_number",
-  "section_name"
+  "questions_per_page"
  ],
  "fields": [
   {
-   "fieldname": "section_number",
+   "fieldname": "questions_per_page",
    "fieldtype": "Int",
-   "label": "Section Number",
-   "unique": 1
-  },
-  {
-   "fieldname": "section_name",
-   "fieldtype": "Data",
-   "label": "Section Name"
+   "label": "Questions per page",
+   "non_negative": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "issingle": 1,
  "links": [],
- "modified": "2024-06-03 11:43:02.672583",
+ "modified": "2024-10-11 14:05:14.644959",
  "modified_by": "Administrator",
  "module": "Quiz Maker",
- "name": "QMK Section",
- "naming_rule": "Expression",
+ "name": "Quiz Settings",
  "owner": "Administrator",
  "permissions": [
   {
    "create": 1,
    "delete": 1,
    "email": 1,
-   "export": 1,
    "print": 1,
    "read": 1,
-   "report": 1,
    "role": "System Manager",
    "share": 1,
    "write": 1
   }
  ],
- "sort_field": "creation",
+ "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
 }

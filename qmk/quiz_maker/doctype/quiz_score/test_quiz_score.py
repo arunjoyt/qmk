@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestQMKUnit(FrappeTestCase):
+class TestQuizScore(FrappeTestCase):
 	pass

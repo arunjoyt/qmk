@@ -5,36 +5,37 @@ from datetime import datetime
 def get_context(context):
     context.user = frappe.session.user
 
-    # Get the unit selected by the user (if any)
-    selected_unit = frappe.form_dict.get('unit')
-    context.selected_unit = selected_unit
+    # Get the quiz selected by the user (if any)
+    selected_quiz = frappe.form_dict.get('quiz')
+    context.selected_quiz = selected_quiz
 
-    # Fetch all Unit Names
-    all_units = frappe.get_all('QMK Unit', fields=['unit_name'])
-    context.all_unit_names = [unit['unit_name'] for unit in all_units]
+    # Fetch all Quiz Names
+    all_quizzes = frappe.get_all('Quiz', fields=['quiz_name'])
+    context.all_quizzes = [quiz['quiz_name'] for quiz in all_quizzes]
 
-    questions_per_page = frappe.get_doc("QMK Settings").questions_per_page
-    # Fetch all units if no unit is selected, otherwise filter by the selected unit
-    if selected_unit:
-        filters = {'unit_name': selected_unit}
+    questions_per_page = frappe.get_doc("Quiz Settings").questions_per_page
+
+    # Fetch all quizzes if no quiz is selected, otherwise filter by the selected quiz
+    if selected_quiz:
+        filters = {'quiz_name': selected_quiz}
     else:
         filters = {}
-    units = frappe.get_all("QMK Unit",filters=filters)
-    questions = []
-    for unit in units:
-        unit_doc = frappe.get_doc("QMK Unit", unit.name)
-        questions.extend(unit_doc.questions)
+    quizzes = frappe.get_all("Quiz",filters=filters)
+    qandas = []
+    for quiz in quizzes:
+        quiz_doc = frappe.get_doc("Quiz", quiz.name)
+        qandas.extend(quiz_doc.qanda_text_input)
     # select a random sample of questions
-    if len(questions) > questions_per_page: 
-        context.questions = random.sample(questions, questions_per_page)
+    if len(qandas) > questions_per_page: 
+        context.qandas = random.sample(qandas, questions_per_page)
     else:
-        context.questions = questions
+        context.qandas = qandas
     # if caching is enabled, random sampling will not always work
     
-    # get score of logged in user from QMK Score
+    # get score of logged in user from Quiz Score
     if (context.user != 'Guest'):
         scores = frappe.get_list(
-            "QMK Score",
+            "Quiz Score",
             filters={"user_name": context.user},
             fields=['submit_date',"correct_count","total_count"]
             )
@@ -45,7 +46,7 @@ def get_context(context):
 
 @frappe.whitelist()
 def save_score(user, correct_answer_count, total_question_count, submit_date):
-    doc = frappe.new_doc("QMK Score")
+    doc = frappe.new_doc("Quiz Score")
     doc.user_name  = frappe.get_doc("User",user)
     doc.correct_count = correct_answer_count
     doc.total_count = total_question_count

@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class QMKSettings(Document):
+class QandATableTextInput(Document):
 	pass

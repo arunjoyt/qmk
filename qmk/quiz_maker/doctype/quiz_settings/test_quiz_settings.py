@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestQMKSettings(FrappeTestCase):
+class TestQuizSettings(FrappeTestCase):
 	pass
