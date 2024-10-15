@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"9WUZPAR83p\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Quiz Master</span>\",\"col\":12}},{\"id\":\"So6vBBf3yV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Quiz\",\"col\":3}}]",
+ "content": "[{\"id\":\"9WUZPAR83p\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Quiz Maker</span>\",\"col\":12}},{\"id\":\"So6vBBf3yV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Quiz List\",\"col\":3}}]",
  "creation": "2024-10-14 16:41:25.503410",
  "custom_blocks": [],
  "docstatus": 0,
@@ -8,15 +8,15 @@
  "for_user": "",
  "hide_custom": 0,
  "icon": "unhide",
- "idx": 0,
- "indicator_color": "green",
+ "idx": 1,
+ "indicator_color": "",
  "is_hidden": 0,
- "label": "Quiz Master",
+ "label": "Quiz Maker",
  "links": [],
- "modified": "2024-10-14 16:44:15.348040",
+ "modified": "2024-10-15 14:03:49.131104",
  "modified_by": "Administrator",
  "module": "Quiz Maker",
- "name": "Quiz Master",
+ "name": "Quiz Maker",
  "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
@@ -28,11 +28,11 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Quiz",
+   "label": "Quiz List",
    "link_to": "Quiz",
    "stats_filter": "[]",
    "type": "DocType"
   }
  ],
- "title": "Quiz Master"
+ "title": "Quiz Maker"
 }
