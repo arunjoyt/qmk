@@ -14,7 +14,7 @@
  "fields": [
   {
    "fieldname": "user_name",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "User Name",
    "options": "User"
   },
@@ -42,7 +42,7 @@
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-30 16:29:29.773967",
+ "modified": "2024-10-16 15:23:13.284192",
  "modified_by": "Administrator",
  "module": "Quiz Maker",
  "name": "Quiz Score",
