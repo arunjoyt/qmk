@@ -10,7 +10,7 @@ fixtures = [
     {
         "doctype": "Role",
         "filters": {
-            "name": ["in", ["Quiz Web User", "Quiz Creator"]]
+            "name": ["in", ["Quiz Participant", "Quiz Creator"]]
         }
     },
     {
