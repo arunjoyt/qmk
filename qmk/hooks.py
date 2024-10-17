@@ -16,7 +16,7 @@ fixtures = [
     {
         "doctype": "Custom DocPerm",
         "filters": {
-            "parent": ["in", ["Quiz Score", "Quiz"]]
+            "role": ["in", ["Quiz Participant", "Quiz Creator"]]
         }
     },
 ]
