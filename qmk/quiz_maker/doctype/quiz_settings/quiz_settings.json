@@ -9,6 +9,7 @@
  ],
  "fields": [
   {
+   "default": "5",
    "fieldname": "questions_per_page",
    "fieldtype": "Int",
    "label": "Questions per page",
@@ -18,7 +19,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-10-11 14:05:14.644959",
+ "modified": "2024-10-17 15:49:36.088705",
  "modified_by": "Administrator",
  "module": "Quiz Maker",
  "name": "Quiz Settings",

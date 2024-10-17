@@ -13,8 +13,6 @@ def get_context(context):
     all_quizzes = frappe.get_all('Quiz', fields=['quiz_name'])
     context.all_quizzes = [quiz['quiz_name'] for quiz in all_quizzes]
 
-    questions_per_page = frappe.get_doc("Quiz Settings").questions_per_page
-
     # Fetch all quizzes if no quiz is selected, otherwise filter by the selected quiz
     if selected_quiz:
         filters = {'quiz_name': selected_quiz}
@@ -25,6 +23,12 @@ def get_context(context):
     for quiz in quizzes:
         quiz_doc = frappe.get_doc("Quiz", quiz.name)
         qandas.extend(quiz_doc.qanda_text_input)
+        # if a quiz is selected, get questions_per_page from that quiz.
+        questions_per_page = quiz_doc.questions_per_page
+    # if no quiz is selected fetch questions_per_page from "Quiz Settings" doctype.
+    if not selected_quiz:
+        questions_per_page = frappe.get_doc("Quiz Settings").questions_per_page
+
     # select a random sample of questions
     if len(qandas) > questions_per_page: 
         context.qandas = random.sample(qandas, questions_per_page)

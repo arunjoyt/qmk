@@ -8,6 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "quiz_name",
+  "questions_per_page",
   "qanda_text_input",
   "qanda_multiple_choice"
  ],
@@ -32,11 +33,18 @@
    "hidden": 1,
    "label": "QandA Multiple Choice",
    "options": "QandA Table - Multiple Choice"
+  },
+  {
+   "default": "5",
+   "fieldname": "questions_per_page",
+   "fieldtype": "Int",
+   "label": "Questions per page",
+   "non_negative": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-11 12:41:39.213542",
+ "modified": "2024-10-17 15:31:59.299179",
  "modified_by": "Administrator",
  "module": "Quiz Maker",
  "name": "Quiz",

@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"9WUZPAR83p\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Quiz Maker</span>\",\"col\":12}},{\"id\":\"So6vBBf3yV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Quiz List\",\"col\":3}},{\"id\":\"T3UqPs1DIL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Quiz Page\",\"col\":3}}]",
+ "content": "[{\"id\":\"9WUZPAR83p\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Quiz Maker</span>\",\"col\":12}},{\"id\":\"So6vBBf3yV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Quiz List\",\"col\":3}},{\"id\":\"T3UqPs1DIL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Quiz Page\",\"col\":3}},{\"id\":\"KuXHD7uhtM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Quiz Maker Settings\",\"col\":3}}]",
  "creation": "2024-10-14 16:41:25.503410",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Quiz Maker",
  "links": [],
- "modified": "2024-10-17 15:25:45.637948",
+ "modified": "2024-10-17 16:53:24.537428",
  "modified_by": "Administrator",
  "module": "Quiz Maker",
  "name": "Quiz Maker",
@@ -31,6 +31,13 @@
    "label": "Quiz Page",
    "type": "URL",
    "url": "/quiz"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Quiz Maker Settings",
+   "link_to": "Quiz Settings",
+   "type": "DocType"
   },
   {
    "color": "Grey",

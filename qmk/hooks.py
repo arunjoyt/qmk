@@ -10,13 +10,13 @@ fixtures = [
     {
         "doctype": "Role",
         "filters": {
-            "name": ["in", ["Quiz Participant", "Quiz Creator"]]
+            "name": ["in", ["Quiz Participant", "Quiz Creator", "Quiz Admin"]]
         }
     },
     {
         "doctype": "Custom DocPerm",
         "filters": {
-            "role": ["in", ["Quiz Participant", "Quiz Creator"]]
+            "role": ["in", ["Quiz Participant", "Quiz Creator", "Quiz Admin"]]
         }
     },
 ]
